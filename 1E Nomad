@@ -1,0 +1,8 @@
+REM Uninstallation 1E Nomad
+del c:\windows\sms*.*
+REM xcopy "\\kallekula\PackagesShare$\TempShareClientMigration" C:\temp\MigrationFiles\ /E /H /R /K /Y
+REM MsiExec.exe /X{fgfgfgfgfgfgfgfgfgfgfgfgfgfg} /qb
+REM MsiExec.exe /I Nomad\6.1.100.116\x64\NomadBranch-x64.msi PIDKEY=fffffffffffffffffffff CONTENTREGISTRATION=1 PLATFORMURL="http://kallekula.com/ActiveEfficiency" /qn
+REM MsiExec.exe /I 1EAgent\7.1.0.263\x64\1EAgent-x64.msi TRANSFORMS=1EAgent\7.1.0.263\x64\1EAgent-x64-7.1.0.263.mst /qb
+ClientPackage\ccmsetup.exe /source:c:\windows\Temp\CMpackage\ClientPackage /forceinstall SMSSITECODE=nnn DNSSUFFIX=nnnn /mp:kallekula.com
+ClientPackage\cmtrace.exe "C:\Windows\ccmsetup\Logs\ccmsetup.log"
